@@ -9,6 +9,9 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Madrid
+      - DOCKER_MODS=linuxserver/mods:universal-package-install
+      - INSTALL_PACKAGES=font-noto-cjk
+      - LC_ALL=es_ES.UTF-8     
     volumes:
       - ./config:/config
     ports:
