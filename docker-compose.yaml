@@ -1,0 +1,17 @@
+services:
+
+  kicad:
+    image: lscr.io/linuxserver/kicad:latest
+    container_name: kicad
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+    volumes:
+      - ./config:/config
+    ports:
+      - 3000:3000
+      - 3001:3001
+    restart: unless-stopped
