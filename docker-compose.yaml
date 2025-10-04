@@ -7,7 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - CUSTOM_USER=admin
-      - PASSWORD=p4ssw0rd      
+      - PASSWORD=p4ssw0rd
       - TZ=Europe/Madrid
       - LC_ALL=es_MX.UTF-8
     volumes:
@@ -15,4 +15,5 @@ services:
     ports:
       - "8200:3000"
       - "8300:3001"
+    shm_size: "1gb"
     restart: unless-stopped
