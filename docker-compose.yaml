@@ -9,10 +9,10 @@ services:
       - CUSTOM_USER=admin
       - PASSWORD=p4ssw0rd
       - TZ=Europe/Madrid
-      - LC_ALL=es_MX.UTF-8
+      - LC_ALL=es_ES.UTF-8
     volumes:
       - ./config:/config
-      - ./LC_MESSAGES/kicad.mo:/usr/share/locale/es_MX/LC_MESSAGES/kicad.mo
+      - ./LC_MESSAGES/kicad.mo:/usr/share/locale/es_ES/LC_MESSAGES/kicad.mo
       - ./projects:/projects
     ports:
       - "8200:3000"
