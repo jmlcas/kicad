@@ -1,6 +1,6 @@
 # Kicad
 
-Ver en "https://localhost:3000"
+Ver en "https://localhost:8300"
 
 Usuario: admin
 
