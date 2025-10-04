@@ -3,9 +3,6 @@ services:
   kicad:
     image: lscr.io/linuxserver/kicad:latest
     container_name: kicad
-    security_opt:
-      - no-new-privileges:false
-      - seccomp:unconfined
     environment:
       - PUID=1000
       - PGID=1000
