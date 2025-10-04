@@ -12,9 +12,7 @@ services:
       - CUSTOM_USER=admin
       - PASSWORD=p4ssw0rd      
       - TZ=Europe/Madrid
-      - LC_ALL=es_MX.UTF-8       
-      - DOCKER_MODS=linuxserver/mods:universal-package-install
-      - INSTALL_PACKAGES=font-noto-cjk    
+      - LC_ALL=es_MX.UTF-8
     volumes:
       - ./config:/config
     ports:
