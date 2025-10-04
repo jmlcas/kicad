@@ -4,14 +4,17 @@ services:
     image: lscr.io/linuxserver/kicad:latest
     container_name: kicad
     security_opt:
-      - seccomp:unconfined #optional
+      - no-new-privileges:false
+      - seccomp:unconfined
     environment:
       - PUID=1000
       - PGID=1000
+      - CUSTOM_USER=admin
+      - PASSWORD=p4ssw0rd      
       - TZ=Europe/Madrid
+      - LC_ALL=es_ES.UTF-8       
       - DOCKER_MODS=linuxserver/mods:universal-package-install
-      - INSTALL_PACKAGES=font-noto-cjk
-      - LC_ALL=es_ES.UTF-8     
+      - INSTALL_PACKAGES=font-noto-cjk    
     volumes:
       - ./config:/config
     ports:
